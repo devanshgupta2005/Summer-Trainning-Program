@@ -1,0 +1,74 @@
+<!-- Create box model with the following attributes:To create a box model with specific attributes, you can use CSS to define the properties of the box
+model. Here is an example of how to create a box model with specific attributes using CSS:```html -->
+
+<!-- create submit button below every box at center of the page. -->
+
+<!-- add image to every box model with the following attributes: width: 100px; height: 100px; border-radius: 50%; background-color: #ff5733; margin-top: 10px; display: block; margin-left: auto; margin-right: auto; -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Example</title>
+    <style>
+        .box {
+            width: 500px;
+            /* Width of the box */
+            /* height: 500px;  */
+            /* Height of the box*/
+            padding: 50px;
+            /* Padding inside the box */
+            border: 5px solid #0a0a0a;
+            /* Border thickness and color */
+            margin: 30px;
+
+            /* Margin outside the box */
+            background-color: #3305ff;
+            /* Background color of the box */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px; 
+        }
+        .submit-button {
+            display: block;
+            /* margin: 50px auto; */
+            padding: 20px;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"  style="display: flex; justify-content: center; align-items: center; gap: 20px; " >
+
+        
+        <div class="box">
+            <h1>Card 1</h1>
+            <img src="https://imgs.search.brave.com/pIeuqxAlGJ5PXMxXSPtoxWKDVRUHOfvz_zvVyobm4RQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZyZWUtcGhvdG8v/aGFuZC1wcmVzZW50/aW5nLW1vZGVsLWhv/dXNlLWhvbWUtbG9h/bi1jYW1wYWlnbl81/Mzg3Ni0xMDQ5NzAu/anBnP3NlbXQ9YWlz/X2h5YnJpZCZ3PTc0/MCZxPTgw" alt="Image 1">
+            <button class="submit-button" type="submit">Submit</button>
+        </div>
+        <div class="box">
+            <h1>Card 2</h1>
+            <img src="https://imgs.search.brave.com/pIeuqxAlGJ5PXMxXSPtoxWKDVRUHOfvz_zvVyobm4RQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZyZWUtcGhvdG8v/aGFuZC1wcmVzZW50/aW5nLW1vZGVsLWhv/dXNlLWhvbWUtbG9h/bi1jYW1wYWlnbl81/Mzg3Ni0xMDQ5NzAu/anBnP3NlbXQ9YWlz/X2h5YnJpZCZ3PTc0/MCZxPTgw"
+                alt="Image 1">
+            <button class="submit-button" type="submit">Submit</button>
+        </div> 
+        
+        <div class="box">
+            <h1>Card 3</h1>
+            <img src="https://imgs.search.brave.com/pIeuqxAlGJ5PXMxXSPtoxWKDVRUHOfvz_zvVyobm4RQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZyZWUtcGhvdG8v/aGFuZC1wcmVzZW50/aW5nLW1vZGVsLWhv/dXNlLWhvbWUtbG9h/bi1jYW1wYWlnbl81/Mzg3Ni0xMDQ5NzAu/anBnP3NlbXQ9YWlz/X2h5YnJpZCZ3PTc0/MCZxPTgw"
+                alt="Image 1">
+            <button class="submit-button" type="submit">Submit</button>
+        </div>
+    </div>
+    
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="index.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Basic Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    form {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      box-sizing: border-box;
+    }
+
+    .row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .row>div {
+      flex: 1;
+    }
+
+    .buttons {
+      margin-top: 16px;
+      display: flex;
+      gap: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1> Profile Registration</h1>
+  </center>
+  <form>
+    <div class="row">
+      <div>
+        <label for="firstName">First Name</label>
+        <input id="firstName" name="firstName" type="text" placeholder="Enter first name" required>
+      </div>
+      <div>
+        <label for="lastName">Last Name</label>
+        <input id="lastName" name="lastName" type="text" placeholder="Enter last name" required>
+      </div>
+    </div>
+
+    <label for="rollNo">Roll No</label>
+    <input id="rollNo" name="rollNo" type="text" placeholder="e.g., 12345" required>
+
+    <label for="phone">Phone Number</label>
+    <input id="phone" name="phone" type="tel" placeholder="e.g., +91 555 555 5555" pattern="[0-9+\-\s()]{7,}" required>
+
+    <label for="address">Address</label>
+    <textarea id="address" name="address" rows="3" cols="5" placeholder="Street, City, State, ZIP" required></textarea>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" placeholder="Choose a password" required>
+
+    <div class="buttons">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+</body>
+
+</html>
