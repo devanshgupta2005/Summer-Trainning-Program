@@ -1,0 +1,186 @@
+/* ===========================
+        GLOBAL
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eceff1;
+    padding: 40px;
+}
+
+/* ===========================
+        GRID CONTAINER
+=========================== */
+
+.container {
+
+    display: grid;
+
+    /* Columns */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* Rows */
+    grid-template-rows: 150px 150px 150px;
+
+    /* Space between boxes */
+    gap: 20px;
+
+    /* Horizontal alignment of items */
+    justify-items: center;
+
+    /* Vertical alignment of items */
+    align-items: center;
+
+    /* Shortcut */
+    /* place-items:center; */
+
+    /* Alignment of entire grid */
+    justify-content: center;
+    align-content: center;
+
+    /* Shortcut */
+    /* place-content:center; */
+
+    /* Size of container */
+    width: 90%;
+    height: 80vh;
+
+    margin: auto;
+
+    background: white;
+    border: 5px solid black;
+
+    /* Implicit rows */
+    grid-auto-rows: 120px;
+
+    /* Implicit columns */
+    grid-auto-columns: 150px;
+
+    /* Flow */
+    grid-auto-flow: row;
+
+}
+
+
+/* ===========================
+        COMMON BOX STYLE
+=========================== */
+
+.box {
+
+    width: 90%;
+
+    height: 90%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: white;
+
+}
+
+
+/* ===========================
+        BOX COLORS
+=========================== */
+
+.box1 {
+    background: #f44336;
+}
+
+.box2 {
+    background: #2196f3;
+}
+
+.box3 {
+    background: #4caf50;
+}
+
+.box4 {
+    background: #ff9800;
+}
+
+.box5 {
+    background: #9c27b0;
+}
+
+.box6 {
+    background: #009688;
+}
+
+.box7 {
+    background: #795548;
+}
+
+.box8 {
+    background: #607d8b;
+}
+
+.box9 {
+    background: #3f51b5;
+}
+
+
+/* ===========================
+        GRID ITEM PROPERTIES
+=========================== */
+
+
+/* Span Columns */
+
+.box1 {
+
+    grid-column: 1 / 3;
+
+}
+
+
+/* Span Rows */
+
+.box2 {
+
+    grid-row: 1 / 3;
+
+}
+
+
+/* Span using span keyword */
+
+.box5 {
+
+    grid-column: span 2;
+
+}
+
+
+/* Self Alignment */
+
+.box7 {
+
+    justify-self: end;
+
+    align-self: start;
+
+}
+
+
+/* Shortcut */
+
+.box8 {
+
+    place-self: center;
+
+}
