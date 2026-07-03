@@ -1,0 +1,399 @@
+< !DOCTYPE html >
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>DOM Practice</title>
+                    <style>
+                        body{
+
+                            font - family:Arial;
+
+                        padding:30px;
+
+                        transition:0.5s;
+
+    }
+
+                        button{
+
+                            padding:10px 20px;
+
+                        margin:5px;
+
+                        cursor:pointer;
+
+    }
+
+                        #box{
+
+                            margin - top:30px;
+
+                        padding:30px;
+
+                        background:skyblue;
+
+                        font-size:25px;
+
+                        width:250px;
+
+                        text-align:center;
+
+                        border-radius:10px;
+
+                        transition:.4s;
+
+    }
+
+                        .dark{
+
+                            background:#111;
+
+                        color:white;
+
+    }
+
+                        li{
+
+                            font - size:20px;
+
+                        margin:10px;
+
+    }
+                    </style>
+
+
+                </head>
+
+                <body>
+
+                    <h1 id="heading">DOM Mastery</h1>
+
+                    <p class="text">
+                        Learn JavaScript DOM Manipulation
+                    </p>
+
+                    <input
+                        type="text"
+                        id="nameInput"
+                        placeholder="Enter your name">
+
+                        <br><br>
+
+                            <button id="changeText">Change Heading</button>
+
+                            <button id="changeColor">Change Color</button>
+
+                            <button id="addItem">Add List Item</button>
+
+                            <button id="removeItem">Remove Last Item</button>
+
+                            <button id="toggleTheme">Toggle Theme</button>
+
+                            <hr>
+
+                                <ul id="list">
+
+                                    <li>HTML</li>
+
+                                    <li>CSS</li>
+
+                                    <li>JavaScript</li>
+
+                                </ul>
+
+                                <div id="box">
+
+                                    This is a Box
+
+                                </div>
+
+                                <script>
+                                    // =====================================
+                                    // DOM Practice Program
+                                    // =====================================
+
+                                    // Selecting Elements
+
+                                    const heading = document.getElementById("heading");
+
+                                    const text = document.querySelector(".text");
+
+                                    const input = document.getElementById("nameInput");
+
+                                    const list = document.getElementById("list");
+
+                                    const box = document.getElementById("box");
+
+
+                                    // Buttons
+
+                                    const changeText = document.getElementById("changeText");
+
+                                    const changeColor = document.getElementById("changeColor");
+
+                                    const addItem = document.getElementById("addItem");
+
+                                    const removeItem = document.getElementById("removeItem");
+
+                                    const toggleTheme = document.getElementById("toggleTheme");
+
+
+
+                                    // ----------------------------------
+                                    // Change Heading
+                                    // ----------------------------------
+
+                                    changeText.addEventListener("click", function () {
+
+    if (input.value == "") {
+
+                                        heading.innerText = "Welcome Student";
+
+    } else {
+
+                                        heading.innerHTML = "Hello " + input.value;
+
+    }
+
+});
+
+
+
+                                    // ----------------------------------
+                                    // Change Box Color
+                                    // ----------------------------------
+
+                                    changeColor.addEventListener("click", function () {
+
+                                        box.style.background = "tomato";
+
+                                    box.style.color = "white";
+
+                                    box.style.fontSize = "30px";
+
+                                    box.style.borderRadius = "25px";
+
+});
+
+
+
+                                    // ----------------------------------
+                                    // Add List Item
+                                    // ----------------------------------
+
+                                    let count = 1;
+
+                                    addItem.addEventListener("click", function () {
+
+                                        let li = document.createElement("li");
+
+                                    li.innerText = "New Item " + count;
+
+                                    list.appendChild(li);
+
+                                    count++;
+
+});
+
+
+
+                                    // ----------------------------------
+                                    // Remove Last Item
+                                    // ----------------------------------
+
+                                    removeItem.addEventListener("click", function () {
+
+    if (list.lastElementChild) {
+
+                                        list.removeChild(list.lastElementChild);
+
+    }
+
+});
+
+
+
+                                    // ----------------------------------
+                                    // Toggle Dark Mode
+                                    // ----------------------------------
+
+                                    toggleTheme.addEventListener("click", function () {
+
+                                        document.body.classList.toggle("dark");
+
+});
+
+
+
+                                    // ----------------------------------
+                                    // Mouse Events
+                                    // ----------------------------------
+
+                                    box.addEventListener("mouseover", function () {
+
+                                        box.innerText = "Mouse Entered";
+
+});
+
+                                    box.addEventListener("mouseout", function () {
+
+                                        box.innerText = "Mouse Left";
+
+});
+
+
+
+                                    // ----------------------------------
+                                    // Double Click
+                                    // ----------------------------------
+
+                                    box.addEventListener("dblclick", function () {
+
+                                        alert("Double Click Detected");
+
+});
+
+
+
+                                    // ----------------------------------
+                                    // Keyboard Event
+                                    // ----------------------------------
+
+                                    input.addEventListener("keyup", function () {
+
+                                        console.log("Typing :", input.value);
+
+});
+
+
+
+                                    // ----------------------------------
+                                    // Click Event
+                                    // ----------------------------------
+
+                                    document.addEventListener("click", function (event) {
+
+                                        console.log("Clicked Element :", event.target);
+
+});
+
+
+
+                                    // ----------------------------------
+                                    // Parent and Children
+                                    // ----------------------------------
+
+                                    console.log(list.parentElement);
+
+                                    console.log(list.children);
+
+                                    console.log(list.firstElementChild);
+
+                                    console.log(list.lastElementChild);
+
+
+
+                                    // ----------------------------------
+                                    // Change Attribute
+                                    // ----------------------------------
+
+                                    input.setAttribute("placeholder", "Type your full name");
+
+
+
+                                    // ----------------------------------
+                                    // Read Attribute
+                                    // ----------------------------------
+
+                                    console.log(input.getAttribute("placeholder"));
+
+
+
+                                    // ----------------------------------
+                                    // Remove Attribute
+                                    // ----------------------------------
+
+                                    // input.removeAttribute("placeholder");
+
+
+
+                                    // ----------------------------------
+                                    // Create New Div
+                                    // ----------------------------------
+
+                                    let div = document.createElement("div");
+
+                                    div.innerHTML = "<h2>DOM Created Element</h2>";
+
+                                    document.body.appendChild(div);
+
+
+
+                                    // ----------------------------------
+                                    // Timer
+                                    // ----------------------------------
+
+                                    setTimeout(function () {
+
+                                        console.log("5 Seconds Completed");
+
+}, 5000);
+
+
+
+                                    // ----------------------------------
+                                    // Interval
+                                    // ----------------------------------
+
+                                    let number = 1;
+
+                                    setInterval(function () {
+
+                                        console.log("Running :", number);
+
+                                    number++;
+
+}, 3000);
+
+
+
+                                    // ----------------------------------
+                                    // Window Object
+                                    // ----------------------------------
+
+                                    console.log(window);
+
+
+
+                                    // ----------------------------------
+                                    // Document Object
+                                    // ----------------------------------
+
+                                    console.log(document);
+
+
+
+                                    // ----------------------------------
+                                    // Page Loaded
+                                    // ----------------------------------
+
+                                    window.onload = function () {
+
+                                        console.log("Website Loaded Successfully");
+
+};
+
+
+
+                                    // ----------------------------------
+                                    // End
+                                    // ----------------------------------
+
+                                    console.log("DOM Practice Started");
+
+
+                                </script>
+
+                            </body>
+                        </html>
