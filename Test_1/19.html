@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox Cards</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px;
+        }
+
+        .card {
+            width: 220px;
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px lightgray;
+        }
+
+        .card h2 {
+            color: #2c3e50;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .card button {
+            padding: 8px 15px;
+            border: none;
+            background: #3498db;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>This is the first card.</p>
+            <button>Read More</button>
+        </div>
+
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>This is the second card.</p>
+            <button>Read More</button>
+        </div>
+
+        <div class="card">
+            <h2>Card 3</h2>
+            <p>This is the third card.</p>
+            <button>Read More</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

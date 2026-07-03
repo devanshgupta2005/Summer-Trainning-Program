@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio Hero Section</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            padding: 40px;
+        }
+
+        .content {
+            max-width: 500px;
+        }
+
+        .content h1 {
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .content h3 {
+            color: #ffeaa7;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            color: #f8f9fa;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .content button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #ffffff;
+            color: #0984e3;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .content button:hover {
+            background: #ffeaa7;
+            transform: scale(1.05);
+        }
+
+        .image img {
+            width: 280px;
+            height: 380px;
+            border-radius: 50%;
+            border: 6px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .image img:hover {
+            transform: scale(1.05) rotate(3deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <div class="content">
+            <h1>Hello, I'm Devansh Gupta </h1>
+            <h3> Full Stack Web Developer</h3>
+
+            <p>
+                I create beautiful and responsive websites using HTML, CSS,
+                and JavaScript. I enjoy learning new technologies and building
+                creative web projects.
+            </p>
+
+            <button>Hire Me</button>
+        </div>
+
+        <div class="image">
+            <img src="phtoto.jpeg"" alt=" Profile Image">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
