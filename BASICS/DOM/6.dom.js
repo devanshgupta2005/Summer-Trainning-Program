@@ -1,54 +1,26 @@
-// ===============================
-// Selecting Elements
-// ===============================
+// Select button and container
+const button = document.getElementById("createImage");
+const container = document.getElementById("imageContainer");
 
-const heading = document.getElementById("heading");
-const paragraph = document.getElementById("paragraph");
+// Generate image when button is clicked
+button.addEventListener("click", function () {
 
-const changeHeading = document.getElementById("changeHeading");
-const changeParagraph = document.getElementById("changeParagraph");
-const changeBoth = document.getElementById("changeBoth");
+    // Create image element
+    const img = document.createElement("img");
 
-// ===============================
-// Change Heading
-// ===============================
+    // Set image properties
+    img.src = "https://picsum.photos/700/500";
+    img.alt = "Random Image";
+    img.width = 700;
+    img.height = 500;
 
-changeHeading.addEventListener("click", function () {
+    // Apply styles
+    img.style.border = "3px solid black";
+    img.style.borderRadius = "20px";
+    img.style.marginTop = "100px";
+    img.style.display = "list-item";
 
-    heading.innerText = "Heading Changed Successfully!";
-    heading.style.color = "blue";
-    heading.style.fontSize = "40px";
-
-});
-
-// ===============================
-// Change Paragraph
-// ===============================
-
-changeParagraph.addEventListener("click", function () {
-
-    paragraph.innerHTML =
-        "<b>This paragraph was updated using JavaScript DOM.</b>";
-
-    paragraph.style.color = "green";
-    paragraph.style.fontSize = "20px";
-
-});
-
-// ===============================
-// Change Both
-// ===============================
-
-changeBoth.addEventListener("click", function () {
-
-    heading.innerText = "DOM Manipulation";
-    heading.style.color = "red";
-
-    paragraph.innerHTML =
-        "JavaScript can change <b>text</b>, <i>HTML</i>, and <u>CSS</u> dynamically.";
-
-    paragraph.style.background = "#f2f2f2";
-    paragraph.style.padding = "10px";
-    paragraph.style.borderRadius = "8px";
+    // Add image to the page
+    container.appendChild(img);
 
 });
