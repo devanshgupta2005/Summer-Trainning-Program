@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import Footer from './Components/Footer'
+import Header from './Components/Header'
+import Newtask from './Components/newtask'
 
 
 function App() {
@@ -6,9 +9,10 @@ function App() {
 
   return (
    <>
-   
-   <div>DG</div>
-   <h1>Welcome to Vite + React</h1>
+   <Header/>
+   <Newtask/>
+
+   <Footer/>
    </>
   )
 }
